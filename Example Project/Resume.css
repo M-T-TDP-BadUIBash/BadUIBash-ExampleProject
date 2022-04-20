@@ -25,4 +25,14 @@ body
     min-height:50px;
     min-width:50px;
     font-family:Consolas;
+    visibility: hidden;
+}
+
+#fake-submit
+{
+    font-size: 2em;
+    min-height:50px;
+    min-width:50px;
+    font-family:Consolas;
+    visibility: visible;
 }
