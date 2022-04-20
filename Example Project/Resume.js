@@ -99,3 +99,17 @@ document.getElementById("b9").addEventListener("click", event => {
     prevPPVal = -1;
     enterEmpty = true;
 });
+
+function preventFocus(event) {
+    event.preventDefault();
+    if (event.relatedTarget) {
+      // Revert focus back to previous blurring element
+      event.relatedTarget.focus();
+    } else {
+      // No previous focus target, blur instead
+      event.currentTarget.blur();
+    }
+  }
+
+document.getElementById("description").addEventListener('focus', preventFocus);
+document.getElementById("description").setAttribute('tabindex', '-1');
